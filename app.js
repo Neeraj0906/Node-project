@@ -13,7 +13,9 @@ const app = express();
 
 // Middleware to parse JSON requests
 app.use(express.json());
-
+app.get('/', (req, res) => {
+    res.send('Welcome to my Node.js project!');
+  });
 // Register the recipe routes
 app.use('/api/recipes', recipeRoutes);
 
